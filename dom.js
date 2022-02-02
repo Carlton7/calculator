@@ -5,3 +5,4 @@ export const addBtn = document.getElementById(`button_add`);
 export const subtractBtn = document.getElementById(`button_subtract`);
 export const multiplyBtn = document.getElementById(`button_multiply`);
 export const divideBtn = document.getElementById(`button_divide`);
+export const equalsBtn = document.getElementById(`button_equals`);

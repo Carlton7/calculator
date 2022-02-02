@@ -9,29 +9,39 @@ import * as DOM from './dom.js';
 //   result(total);
 // }
 
+let storage = 0
+
 let add = (n1,n2) => {
   let total = parseInt(n1, 10) + parseInt(n2, 10);
-  result(total);
+  let answer = `${n1} + ${n2} = ${total}`;
+  storage = answer;
 }
 
 let subtract = (n1,n2) => {
   let total = parseInt(n1, 10) - parseInt(n2, 10);
-  result(total);
+  let answer = `${n1} - ${n2} = ${total}`;
+  storage = answer;
 }
 
 let multiply = (n1,n2) => {
   let total = parseInt(n1, 10) * parseInt(n2, 10);
-  result(total);
+  let answer = `${n1} * ${n2} = ${total}`;
+  storage = answer;
 }
 
 let divide = (n1,n2) => {
   let total = parseInt(n1, 10) / parseInt(n2, 10);
-  result(total);
+  let answer = `${n1} / ${n2} = ${total}`;
+  storage = answer;
 }
 
-let result = (total) => {
+let equals = (storage) => {
+  result(storage)
+}
+
+let result = (storage) => {
   let list = document.createElement(`li`);
-  list.innerHTML = total;
+  list.innerHTML = storage;
   DOM.listOutput.appendChild(list);
 }
 
@@ -39,3 +49,4 @@ DOM.addBtn.onclick = () => add(DOM.inputOne.value, DOM.inputTwo.value);
 DOM.subtractBtn.onclick = () => subtract(DOM.inputOne.value, DOM.inputTwo.value);
 DOM.multiplyBtn.onclick = () => multiply(DOM.inputOne.value, DOM.inputTwo.value);
 DOM.divideBtn.onclick = () => divide(DOM.inputOne.value, DOM.inputTwo.value);
+DOM.equalsBtn.onclick = () => equals(storage);
