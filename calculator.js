@@ -41,11 +41,6 @@ let equals = (storage) => {
   DOM.listOutput.appendChild(list);
 }
 
-// let result = (storage) => {
-//   let list = document.createElement(`li`);
-//   list.innerHTML = storage;
-//   DOM.listOutput.appendChild(list);
-// }
 
 DOM.addBtn.onclick = () => add(DOM.inputOne.value, DOM.inputTwo.value);
 DOM.subtractBtn.onclick = () => subtract(DOM.inputOne.value, DOM.inputTwo.value);
