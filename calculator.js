@@ -41,9 +41,17 @@ let equals = (storage) => {
   DOM.listOutput.appendChild(list);
 }
 
+let clear = () => {
+  let fullList = document.getElementById(`list_output`);
+  fullList.innerHTML = " ";
+  DOM.inputOne.value = " ";
+  DOM.inputTwo.value = " ";
+}
+
 
 DOM.addBtn.onclick = () => add(DOM.inputOne.value, DOM.inputTwo.value);
 DOM.subtractBtn.onclick = () => subtract(DOM.inputOne.value, DOM.inputTwo.value);
 DOM.multiplyBtn.onclick = () => multiply(DOM.inputOne.value, DOM.inputTwo.value);
 DOM.divideBtn.onclick = () => divide(DOM.inputOne.value, DOM.inputTwo.value);
 DOM.equalsBtn.onclick = () => equals(storage);
+DOM.clearBtn.onclick = () => clear();
