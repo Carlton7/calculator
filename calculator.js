@@ -12,25 +12,25 @@ import * as DOM from './dom.js';
 let storage = 0
 
 let add = (n1,n2) => {
-  let total = parseInt(n1, 10) + parseInt(n2, 10);
+  let total = Number(n1) + Number(n2);
   let answer = `${n1} + ${n2} = ${total}`;
   storage = answer;
 }
 
 let subtract = (n1,n2) => {
-  let total = parseInt(n1, 10) - parseInt(n2, 10);
+  let total = Number(n1) - Number(n2);
   let answer = `${n1} - ${n2} = ${total}`;
   storage = answer;
 }
 
 let multiply = (n1,n2) => {
-  let total = parseInt(n1, 10) * parseInt(n2, 10);
+  let total = Number(n1) * Number(n2);
   let answer = `${n1} * ${n2} = ${total}`;
   storage = answer;
 }
 
 let divide = (n1,n2) => {
-  let total = parseInt(n1, 10) / parseInt(n2, 10);
+  let total = Number(n1) / Number(n2);
   let answer = `${n1} / ${n2} = ${total}`;
   storage = answer;
 }
